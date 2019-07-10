@@ -27,13 +27,16 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Nav />
+        <Nav dispatch={this.props.store.dispatch} count={this.state.count} />
         <div className="row">
           <div className="col-12 col-md-4">
-            <Form />
+            <Form store={this.props.store} error={this.state.error} />
           </div>
           <div className="col-12 col-md-8">
-            <Dragon dragons={this.state.dragons} />
+            <Dragon
+              dispatch={this.props.store.dispatch}
+              dragons={this.state.dragons}
+            />
           </div>
         </div>
       </div>

@@ -7,6 +7,20 @@ import dragonReducer from "./reducer/dragonReducer";
 import App from "./components/App";
 import "bootstrap/dist/css/bootstrap.css";
 
+// Exemple pour tester le reducer :
+
+// const actions = [
+//   { type: "ADD_DRAGON", payload: { dragon: "Test 1" } },
+//   { type: "ADD_DRAGON", payload: { dragon: "Test 2" } },
+//   { type: "REVERSE_DRAGON" },
+//   { type: "ADD_DRAGON", payload: { dragon: "Test 3" } },
+//   { type: "REMOVE_DRAGON", payload: { index: 1 } }
+// ];
+
+// const lastState = actions.reduce(dragonReducer, { dragons: [], count: 0 });
+
+// console.log(lastState);
+
 // Reducer
 const store = createStore(dragonReducer);
 const render = () =>
